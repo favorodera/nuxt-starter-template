@@ -7,13 +7,11 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@vueuse/nuxt',
     '@nuxt/eslint',
+    '@nuxtjs/seo',
   ],
   devtools: { enabled: true },
   app: {
     rootTag: 'main',
-    head: {
-      htmlAttrs: { lang: 'en', dir: 'ltr' },
-    },
     rootAttrs: {
       id: 'app',
     },
@@ -21,6 +19,10 @@ export default defineNuxtConfig({
     layoutTransition: { name: 'fade-out-in', mode: 'out-in' },
   },
   css: ['~/assets/styles/index.css'],
+  site: {
+    url: '[url]',
+    name: '[name]',
+  },
   compatibilityDate: '2025-07-15',
   vite: {
     $server: {
@@ -39,6 +41,11 @@ export default defineNuxtConfig({
   eslint: {
     config: {
       stylistic: true,
+    },
+  },
+  fonts: {
+    defaults: {
+      weights: [100, 200, 300, 400, 500, 600, 700, 800, 900],
     },
   },
   icon: {

@@ -2,41 +2,24 @@
 @import "@nuxt/ui";
 
 @theme {
-  --font-geist: "Geist", sans-serif;
-
-  --container-8xl: 90rem;
+  --font-sans: "DM Sans", sans-serif;
+  --font-mono: "DM Mono", monospace;
 }
 
 :root {
+  --default-font-family: var(--font-sans);
+  --default-mono-font-family: var(--font-mono);
+  --default-transition-duration: 300ms;
+  --ui-container: var(--container-7xl);
   --ui-primary: black;
-  --ui-container: var(--container-8xl);
 }
 
-
 .dark {
-  --ui-bg: var(--ui-color-neutral-950);
-  --ui-bg-muted: var(--ui-color-neutral-900);
-  --ui-bg-elevated: var(--ui-color-neutral-900);
-  --ui-bg-accented: var(--ui-color-neutral-800);
-
   --ui-primary: white;
 }
 
 * {
   scroll-behavior: smooth;
-}
-
-html,
-body {
-  height: 100%;
-  font-family: var(--font-geist);
-}
-
-#app {
-  min-height: 100dvh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
 }
 
 ::-ms-reveal {
